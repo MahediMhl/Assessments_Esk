@@ -60,16 +60,17 @@
   <ItemGroup>
     <Compile Include="Configurations\Initialization.cs" />
     <Compile Include="Configurations\PostTestActions.cs" />
+    <Compile Include="Pages\PageEskimiLogin.cs" />
+    <Compile Include="Pages\PageGoogle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shared\Shared.cs" />
     <Compile Include="Tests\TestClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Pages\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="..\packages\Chromium.ChromeDriver.2.37\content\chromedriver.exe">
       <Link>chromedriver.exe</Link>
