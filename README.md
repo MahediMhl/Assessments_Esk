@@ -1,6 +1,6 @@
 # Assessments_Esk
-
-Download the zip from this repo
-open in visual studio
-restore the packages
-run the test verify
+====Please check the master branch===
+1. Download the zip from this repo
+2. open in visual studio
+3. restore the packages
+4. run the test verify
