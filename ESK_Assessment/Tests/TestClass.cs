@@ -33,7 +33,8 @@ namespace ESK_Assessment.Tests
             string username = ConfigurationManager.AppSettings["username"];
             string password = ConfigurationManager.AppSettings["password"];
             string strUrl = _PageGoogle.Search(searchString, _Driver);
-            _Driver = _PageGoogle.OpenSearchResultInNewWindow(strUrl);            
+            _Driver = _PageGoogle.OpenSearchResultInNewWindow(strUrl);
+            _PageEskimiLogin = new PageEskimiLogin(_Driver);
             _PageEskimiLogin.DoLogin(username, password); //credentials do not work
         }
         [TearDown]
