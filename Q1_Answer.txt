@@ -1,0 +1,10 @@
+Ans to the question number 1:
+==============================
+
+1. I would select all values in all the step box and verify the values in created campaign
+2. I would select no values (empty fields) and verify the errors (Error(s): please fix the following issues:)
+3. I would verify the form navigation
+4. I would verify the "Start campaign after approval" business (checked and unchecked behavior)
+5. I would verify the correct options/values are getting offered in selections
+6. I would verify that the campaign launch date cannot be past date
+7. I would verify the search functionality while selecting value
