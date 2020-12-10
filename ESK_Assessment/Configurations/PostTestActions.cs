@@ -29,15 +29,17 @@ namespace ESK_Assessment.Configurations
             byte[] shotAsByteArray = screenshot.AsByteArray;
 
             string portalName = driver.Url;
-            string folderPath = ConfigurationManager.AppSettings["SSPath"];
-
+            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            FileInfo fileInfo = new FileInfo(currentDirectory);
+            DirectoryInfo parentDir = fileInfo.Directory.Parent.Parent;
+            string folderPath = Path.Combine(parentDir.FullName + "\\Screens\\");
             bool exists = Directory.Exists(folderPath);
 
             if (!exists)
                 Directory.CreateDirectory(folderPath);
             string dir = System.IO.Path.GetDirectoryName(folderPath);
             string fileName = TestContext.CurrentContext.Test.FullName + DateTime.Now.ToString("ddd d MMM  hh-mm-ss") + ".png";
-            screenshot.SaveAsFile(@"..\..\TestFailures\" + fileName, ScreenshotImageFormat.Png);
+            screenshot.SaveAsFile(folderPath + fileName, ScreenshotImageFormat.Png);
             screenshot.ToString();
         }
     }

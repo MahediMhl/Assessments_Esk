@@ -26,15 +26,7 @@ namespace ESK_Assessment.Pages
             Searchbox.SendKeys(Keys.Enter);
             string strURL = FindElementByLinkText(searchString, driver).Text;
             return strURL;
-        }
-        public IWebDriver OpenSearchResultInNewWindow(string strUrl)
-        {
-            Initialization initialization = new Initialization();
-            IWebDriver driver;
-            driver = initialization.Initialize();
-            driver.Navigate().GoToUrl(strUrl);
-            return driver;
-        }
+        }        
 
     }
 }
